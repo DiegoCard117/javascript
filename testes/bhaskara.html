@@ -7,33 +7,19 @@
     <title>Bhaskara</title>
 </head>
 <body>
-    <form action="#" method="post">
-        <label for="num1"></label>
-        <input type="number" name="num1" id="a1" required><br>
-        <label for="num2"></label>
-        <input type="number" name="num2" id="b1" required><br>
-        <label for="num3"></label>
-        <input type="number" name="num3" id="c1" required><br>
-        <input type="button" value="Calcular" onclick="calc()">
-    </form>
+
     <script>
         
-    function calc() {
-        var a = document.getElementById(parse.Int(a1))
-        var b = document.getElementById(parse.Int(b1))
-        var c = document.getElementById(parse.Int(c1))
+        var a = window.prompt('Digite um numero')
+        var b = window.prompt('Digite um numero')
+        var c = window.prompt('Digite um numero')
+        
+        var a = number.a
+        var b = number.b
+        var c = number.c
 
-        var delta = b * b - (4 * a * c)
-
-        if (delta > 0){
-            window.alert('Nao existe X valido')
-        } else {
-            var x1 = (-b + Math.sqrt(delta)) / (2 * a)
-            var x2 = (-b - Math.sqrt(delta)) / (2 * a)
-            window.alert(`X1 é ${x1} e X2 é ${x2}`)
-        }
-    }
- 
+        var delta = (b * b) - (4 * a * c)
+        window.alert(` delta é ${delta}`)
     </script>
 </body>
 </html>
