@@ -7,19 +7,31 @@
     <title>Bhaskara</title>
 </head>
 <body>
+    <form action="#" method="post">
+        <label for="a">A</label>
+        <input type="number" name="a" id="a"><br>
+        <label for="b">B</label>
+        <input type="number" name="b" id="b"><br>
+        <label for="c">C</label>
+        <input type="number" name="c" id="c"><br>
+        <input type="button" value="Calcular" onclick="calc()">
+    </form>
 
     <script>
-        
-        var a = parseInt(prompt('Digite um numero'))
-        var b = parseInt(prompt('Digite um numero'))
-        var c = parseInt(prompt('Digite um numero'))
+        function calc() {
+                var a = parseInt(document.getElementById(a))
+                var b = parseInt(document.getElementById(b))
+                var c = parseInt(document.getElementById(c))
 
-        var delta = (b * b) - (4 * a * c)
-       if (delta < 0) {
-        alert('error')
-       } else {
-        var x1 = -b +
-       }
+                var delta = (b * b) - (4 * a * c)
+            if (delta < 0) {
+                alert('error')
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                alert(`${x1} e ${x2}`)
+            } 
+        }
     </script>
 </body>
 </html>
