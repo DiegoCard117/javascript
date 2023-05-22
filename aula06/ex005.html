@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom em Js</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando em Dom</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>Dom</strong> em JS</p>
+    <div>Clique em mim</div>
+    <script>
+        let p1 = window.document.getElementsByTagName('p')[0]
+        document.write(p1.innerHTML)
+    </script>
+</body>
+</html>
