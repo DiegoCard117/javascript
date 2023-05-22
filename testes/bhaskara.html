@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="a">A</label>
+        <input type="number" name="a" id="a"><br>
+        <label for="b">B</label>
+        <input type="number" name="b" id="b"><br>
+        <label for="c">C</label>
+        <input type="number" name="c" id="c"><br>
+        <input type="button" value="Calcular" onclick="calc()">
+    </form>
+
+    <script>        
+        function calc() {
+            let a1 = (document.querySelector("#a"))
+            let b1 = (document.querySelector("#b"))
+            let c1 = (document.querySelector("#c"))
+            let a = Number(a1.value)
+            let b = Number(b1.value)
+            let c = Number(c1.value)
+                let delta = (b * b) - (4 * a * c)
+            if (delta < 0) {
+                alert('Delta é negativo, logo não possui raíz real')
+            } else {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                alert(`O primeiro X é${x1} e o segundo X${x2}`)
+            }  
+        }
+    </script>
+</body>
+</html>
