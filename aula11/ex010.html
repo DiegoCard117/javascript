@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="vel">Velocidade</label>
+    <input type="number" name="vel" id="vel" required>
+    <input type="button" value="Enviar" onclick="clicou()">
+    <div id="res"></div>
+    <script>
+        function clicou() {
+            let velocidade = document.querySelector('#vel')
+            let vel = Number(velocidade.value)
+            let res = document.querySelector('#res')
+            if (vel > 60) {
+                res.innerHTML = (`Sua velocidade é ${vel}km/h e ultrapassou o limite da via, MULTADO!`)
+            } else {
+                res.innerHTML = (`Sua velocidade é ${vel}km/h, continue dirigindo com segurança`)
+            } 
+        }
+    </script>
+</body>
+</html>
