@@ -2,7 +2,6 @@
 
 body {
     background: lightblue;
-    text-align: center;
     font: normal 15pt Arial;
 }
 
@@ -17,6 +16,21 @@ section {
     padding: 10px;
 }
 
+h1 {
+    text-align: center;
+}
+
 footer {
     font-style: italic;
+    text-align: center;
 }
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
