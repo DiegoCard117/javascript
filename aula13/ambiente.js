@@ -18,5 +18,4 @@ while (c <= 6) {
 while (c < 10) {
     console.log('te amo vida')
     c++
-    
 }
