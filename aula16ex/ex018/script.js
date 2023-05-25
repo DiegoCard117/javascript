@@ -29,7 +29,7 @@ function adicionar() {
         item.text = `Valor ${num.value} adicionado.` 
         lista.appendChild(item) //adiciona o child item
         res.innerHTML = ''
-    }else {
+    } else {
         alert('Valor invalido ou ja encontrado na lista')
     }
     num.value = ''
@@ -41,7 +41,7 @@ function finalizar() {
         alert('Adicione valores na lista')
     } else {
         let total = valores.length
-        let maior = valores[0] //se apenas um numero, ele é o maior e o menor
+        let maior = valores[0] //se tem apenas um numero, ele é o maior e o menor
         let menor = valores[0] 
         let soma = 0
         let media = 0
@@ -56,10 +56,6 @@ function finalizar() {
         }
         media = soma / total
         res.innerHTML = ''
-        res.innerHTML += `<p>Ao todo temos ${total} números cadastrados</p>`
-        res.innerHTML += `<p>O maior valor informado é ${maior}</p>`
-        res.innerHTML += `<p>O menor valor informado é ${menor}</p>`
-        res.innerHTML += `<p>Somando todos os valores temos ${soma}</p>`
-        res.innerHTML += `<p>A media dos valores é ${media}</p>`
+        res.innerHTML += `<p>Ao todo temos ${total} números cadastrados</p> <p>O maior valor informado é ${maior}</p> <p>O menor valor informado é ${menor}</p> <p>Somando todos os valores temos ${soma}</p> <p>A media dos valores é ${media}</p>`
     }
 }
