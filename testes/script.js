@@ -1,13 +1,16 @@
-    var a = document.getElementById(parseInt(a1))
-    var b = document.getElementById(parseInt(b1))
-    var c = document.getElementById(parseInt(c1))
-
-    var delta = b * b - (4 * a * c)
-
-    if (delta > 0){
-        window.alert('Nao existe X valido')
+function calc() {
+    let a1 = (document.querySelector("#a"))
+    let b1 = (document.querySelector("#b"))
+    let c1 = (document.querySelector("#c"))
+    let a = Number(a1.value)
+    let b = Number(b1.value)
+    let c = Number(c1.value)
+        let delta = (b * b) - (4 * a * c)
+    if (delta < 0) {
+        alert('Delta é negativo, logo não possui raíz real')
     } else {
-        var x1 = (-b + Math.sqrt(delta)) / (2 * a)
-        var x2 = (-b - Math.sqrt(delta)) / (2 * a)
-        window.alert(`X1 é ${x1} e X2 é ${x2}`)
-    }
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a)
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a)
+        alert(`O primeiro X é ${x1} e o segundo X${x2}`)
+    }  
+}
