@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhaskara</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="#" method="post">
-        <label for="a">A</label>
-        <input type="number" name="a" id="a"><br>
-        <label for="b">B</label>
-        <input type="number" name="b" id="b"><br>
-        <label for="c">C</label>
-        <input type="number" name="c" id="c"><br>
-        <input type="button" value="Calcular" onclick="calc()">
-    </form>
-
+    <h1>Calculando Bhaskara</h1>
+    <p>Escreva abaixo o valor de a, b e c</p>
+    <div>
+        <form>
+            <label for="a">A</label>
+            <input type="number" name="a" id="a" placeholder="Insira A"><br>
+            <label for="b">B</label>
+            <input type="number" name="b" id="b" placeholder="Insira C"<br>
+            <label for="c">C</label>
+            <input type="number" name="c" id="c" placeholder="Insira B"<br>
+            <button onclick="calc()">Calcular</button>
+        </form>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
