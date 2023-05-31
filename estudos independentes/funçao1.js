@@ -3,3 +3,6 @@ function cubo(n) {
 }
 
 console.log(cubo(5))
+
+//Arrow Function
+let quadrado = (num) => num * num; console.log(quadrado(3))
