@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-div {
+.contas {
     display: block;
     width: 80%;
     height: 70%;
@@ -25,7 +25,7 @@ div {
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.521);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
 }
 
 input {
@@ -34,7 +34,11 @@ input {
     border-radius: 10px ;
     padding: 10px;
     border: 1px solid;
-    background-color: transparent;
+    background-color: #734930a1;
+    color: white;
+}
+
+input::placeholder{
     color: white;
 }
 
@@ -65,10 +69,21 @@ button {
     width: 100px;
     height: 35px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.507);
+    transition: 0.5s;
 }
 
 button:hover {
-    color: aliceblue;
     transform: scale(1.05);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.507);
+    outline-offset: 3px;
+    outline: 1px solid #BFBFBF;
+}
+
+
+#res {
+    color: #734930;
+    position: absolute;
+    bottom: 50px;
+    font-size: 1.3em;
+    font-weight: 600;
 }
