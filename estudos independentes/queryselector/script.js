@@ -16,3 +16,12 @@ function red() {
 
     }
 }
+
+let div = document.querySelector('div')
+
+let paragrafo = document.createElement('p')
+
+let texto = document.createTextNode("dentro da div, dentro do paragrafo")
+
+paragrafo.appendChild(texto)
+div.appendChild(paragrafo)
