@@ -16,12 +16,41 @@ function red() {
 
     }
 }
-
-let div = document.querySelector('div')
+//REMOVENDO
+let paradiv = document.querySelector('.para')
 
 let paragrafo = document.createElement('p')
 
 let texto = document.createTextNode("dentro da div, dentro do paragrafo")
 
 paragrafo.appendChild(texto)
-div.appendChild(paragrafo)
+paradiv.appendChild(paragrafo)
+
+//removendo filho
+let removendo = document.querySelector('.remove')
+let p = document.querySelector('.remove p')
+removendo.removeChild(p)
+
+//remove o elemento em si
+let h2 = document.querySelector('h2')
+
+h2.remove()
+
+//ADICIONANDO COM APPENDCHILD
+
+let divNova = document.createElement('div')
+divNova.classList = 'div-nova'
+
+let container = document.querySelector('.container')
+
+container.appendChild(divNova)
+
+//ADICIONANDO COM insertBefore(insere antes)
+
+let divNova2 = document.createElement('div')
+divNova2.classList = 'div-before'
+
+container.insertBefore(divNova2, divNova)
+
+
+
