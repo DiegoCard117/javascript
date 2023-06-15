@@ -48,3 +48,4 @@ for (let i = 0; array.length > i; i++) {
     let indice = i+1
     console.log(`${indice}-${array[i]}`)
 }
+

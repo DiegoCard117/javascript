@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando dom</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p id="paragrafo">Paragrafo</p>
+    <ul id="lista">
+        <li class="item">item1</li>
+        <li class="item">item2</li>
+        <li class="item">item3</li>
+        <li class="item">item4</li>
+    </ul>
+    <script>
+        //tag
+        let titulo = document.getElementsByTagName('h1')[0]
+        console.log(titulo)
+        //id
+        let frase = document.getElementById('paragrafo')
+        frase.innerHTML = 'Mudei essa frase'
+            console.log(frase)
+        //class
+        let lista = document.getElementsByClassName('item')
+        lista[2].innerHTML = 'Mudei esse item por DOM'
+    </script>
+</body>
+</html>
