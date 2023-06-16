@@ -20,6 +20,10 @@
             width: 100px;
             background-color: blue;
         }
+
+        #prata {
+            float: right;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +47,13 @@
         <div class="remove">
             <p>Ira ser removido</p>
         </div>
-        <button onclick="red()">Clicar aqui</button>
+        
+        <button id="btn" onclick="red()">Clicar aqui</button>
+    </div>
+    <div>
+        <img id="imgcar" src="cruze.png" alt="" width="350px">
+        <button id="car" onclick="trocar()">Vermelho</button>
+        <button id="prata" onclick="trocar2()">Prata</button>
     </div>
     <script src="script.js"></script>
 </body>

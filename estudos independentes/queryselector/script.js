@@ -16,6 +16,7 @@ function red() {
 
     }
 }
+
 //REMOVENDO
 let paradiv = document.querySelector('.para')
 
@@ -51,6 +52,29 @@ let divNova2 = document.createElement('div')
 divNova2.classList = 'div-before'
 
 container.insertBefore(divNova2, divNova)
+/*
+let button = document.querySelector('#btn')
+container.removeChild(button)
+*/
+
+let h3 = document.createElement('h3')
+h3.classList = 'title3'
+let text3 = document.createTextNode('Titulo em H3')
+
+let paragrafo1 = document.querySelector('#paragrafo')
+h3.appendChild(text3)
+container.replaceChild(h3, paragrafo1)
 
 
 
+//trocando atributos
+
+let carro = document.querySelector('#imgcar')
+
+function trocar() {
+    carro.setAttribute('src', 'cruzever.jpg')
+}
+
+function trocar2() {
+    carro.setAttribute('src', 'cruze.png')
+}
