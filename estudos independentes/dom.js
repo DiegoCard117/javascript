@@ -1,5 +1,5 @@
         //criando o array
-        let lista = ["Diego", "Ray", "Yasmin", "Jureba" ];
+        let lista = ["Diego", "Ray", "Yasmin", "Jureba", "Carlos"];
         //pegando o body
         let body = document.getElementsByTagName('body');
         //criando a lista
@@ -17,4 +17,17 @@
             //adicionando cada li com cada nome
             li.appendChild(nomes);
             listali[0].appendChild(li);
-        }
+        } 
+
+        
+//relogio
+setInterval(function(){
+    let relogio = document.querySelector('.relogio')
+
+    let data = new Date
+    let hora = data.getHours()
+    let min = data.getMinutes()
+    let seg = data.getSeconds()
+
+    relogio.textContent = `${hora}:${min}:${seg}` 
+}, 1) 

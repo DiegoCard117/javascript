@@ -7,7 +7,9 @@ setTimeout(function(){
 
 //setInterval
 
-setInterval(function(){
+let time = setInterval(function(){
     console.log('Testando Interval')
 }, 5000)
+
+
 
