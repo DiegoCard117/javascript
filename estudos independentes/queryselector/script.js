@@ -13,7 +13,6 @@ function red() {
         item2.style.background = 'white'
         item2.innerHTML ='Ficou Branco'
         //innerHTML pode alterar as tags
-
     }
 }
 
@@ -65,8 +64,6 @@ let paragrafo1 = document.querySelector('#paragrafo')
 h3.appendChild(text3)
 container.replaceChild(h3, paragrafo1)
 
-
-
 //trocando atributos
 
 let carro = document.querySelector('#imgcar')
@@ -78,7 +75,6 @@ function trocar() {
 function trocar2() {
     carro.setAttribute('src', 'cruze.png')
 }
-
 
 //onload
 /*
@@ -101,6 +97,7 @@ btn2.addEventListener('click', function(){
 
 //keydown 
 //keydown ou keyup(melhor usar o keyup pois so se repete uma vez)
+
 document.addEventListener('keyup', (event) => {
     let body = document.querySelector('body')
     if(event.key === 'Enter') {
@@ -111,3 +108,4 @@ document.addEventListener('keyup', (event) => {
         }
     }
 })
+
