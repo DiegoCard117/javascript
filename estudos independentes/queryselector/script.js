@@ -78,3 +78,36 @@ function trocar() {
 function trocar2() {
     carro.setAttribute('src', 'cruze.png')
 }
+
+
+//onload
+/*
+window.onload = function() {
+    prompt('carregou?')
+}
+*/
+//addEventListener
+
+let btn2 = document.querySelector('#btn2')
+
+btn2.addEventListener('click', function(){
+    if(this.style.background != 'red'){
+        this.style.borderRadius = '10px'
+        this.style.background = 'red'
+    } else if (this.style.background != 'white'){
+        this.style.background = 'white'
+    }
+})
+
+//keydown 
+//keydown ou keyup(melhor usar o keyup pois so se repete uma vez)
+document.addEventListener('keyup', (event) => {
+    let body = document.querySelector('body')
+    if(event.key === 'Enter') {
+        if (body.style.background != 'grey') {
+            body.style.background = 'grey'
+        } else if (body.style.background != 'white') {
+            body.style.background = 'white'
+        }
+    }
+})
