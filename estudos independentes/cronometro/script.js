@@ -5,19 +5,22 @@
 
     let cron
     
-    const crono = document.querySelector('#crono')
+    const crono = document.querySelector('#crono') // paragrafo do cronometro
 
    function inicio() {
-        pause()
-        cron = setInterval(() => {timer() }, 10)
+        pause() //pausar para parar de contar
+        crono.classList = ''
+        cron = setInterval(() => {timer() }, 10)  //rodar timer a cada 10 milisegundos
    }
 
     function pause(){
-        clearInterval(cron)
-        //limpar o setinterval
+        clearInterval(cron)  //deixar o intervalo em 0 segundos
+        crono.classList = 'pause'
     }
 
     function zero() {
+        pause()
+        crono.classList = ''
         hour = 0
         minute = 0
         second = 0
@@ -26,7 +29,7 @@
     }
 
     const timer = () => {
-        if ((mili += 10) == 1000) {
+        if ((mili += 10) == 1000) { //mili recebe mili + 10, quando mili chegar a 1000 ele zera e segundos recebe +1
             mili = 0
             second++
         }

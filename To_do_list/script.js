@@ -5,7 +5,7 @@ const addTask = () => {
         const template = document.querySelector('.template')
         const newTask = template.cloneNode(true)
 
-        //add o titulo da tarefa
+        //add o nome que pegou do input
         newTask.querySelector('.task-title').textContent = taskTitle
 
         //remove a classe inutilizada
