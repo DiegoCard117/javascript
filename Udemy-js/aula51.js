@@ -15,3 +15,14 @@ function pessoa(nome, sobrenome){
 const pessoa1 = pessoa('Diego' , 'Cardoso')
 
 console.log(pessoa1)
+
+
+function criaMulti(multi) {
+    return function(n) {
+        return n * multi
+    }
+}
+
+const x2 = criaMulti(2)
+console.log('4 x2')
+console.log(x2(4))
