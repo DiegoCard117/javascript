@@ -79,12 +79,12 @@ function Calculadora(){
     this.display = document.querySelector('#display');
     this.btnClear = document.querySelector('.btn-clear');
 
-    this.iniciar = function(){
+    this.iniciar = () => {
         this.cliqueBtn();  //nao funciona sem o this pois esta dentro do objeto
         this.Enter(); 
     };
 
-    this.Enter = function(){
+    this.Enter = () => {
         this.display.addEventListener('keyup', (e) => {
             if (e.keyCode === 13) {
                 this.fazConta();
@@ -92,15 +92,11 @@ function Calculadora(){
         })
     };
 
-    this.clearDisplay = function(){
-        this.display.value = '';
-    };
+    this.clearDisplay = () => this.display.value = '';
 
-    this.deleteOne = function(){
-        this.display.value = this.display.value.slice(0, -1);//tamanho da string menos 1
-    };
+    this.deleteOne = () => this.display.value = this.display.value.slice(0, -1);//tamanho da string menos 1
 
-    this.fazConta = function(){
+    this.fazConta = () => {
         let conta = this.display.value;
         try {
             conta = eval(conta)
@@ -116,7 +112,7 @@ function Calculadora(){
         }
     };
 
-    this.cliqueBtn = function(){
+    this.cliqueBtn = () => {
         document.addEventListener('click', (e) =>{
             const el = e.target
             if(el.classList.contains('btn-num')) {
@@ -137,8 +133,9 @@ function Calculadora(){
         })
     };
 
-    this.btnParaDisplay = function(valor){
+    this.btnParaDisplay = (valor) => {
         this.display.value += valor
+        this.display.focus()
     }
 }
 
