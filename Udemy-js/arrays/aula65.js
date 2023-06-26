@@ -19,7 +19,17 @@ const pessoas = [
     {nome: 'Rosana', idade: 32},
     {nome: 'Diego', idade: 21},
 ]
+/*
+const pessoaNomeGrande = pessoas.filter((obj) => obj.nome.length >= 5)
 
-const pessoaNomeGrande = pessoas.filter(function(valor){
-    
-})
+console.log(pessoaNomeGrande)
+
+console.log('--------------------')
+
+const idadeMaior50 = pessoas.filter((obj) => obj.idade > 50)
+
+console.log(idadeMaior50)
+*/
+
+const finalA = pessoas.filter((obj) => obj.nome.toLowerCase().endsWith('a'))  
+console.log(finalA)
