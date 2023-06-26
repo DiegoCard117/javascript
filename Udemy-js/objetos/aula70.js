@@ -41,6 +41,19 @@ function criaPessoa(nome, sobrenome, idade) {
         }
     }
 }
-const pessoa2 = criaPessoa('Diego', 'Cardoso', 21)
-console.log(pessoa2.nomeCompleto)
 
+const pessoa2 = criaPessoa('Diego', 'Cardoso', 21)
+//console.log(pessoa2.nomeCompleto)
+
+
+function Pessoa(nome, sobrenome) {
+    this.nome = nome
+    this.sobrenome = sobrenome
+    Object.freeze(this)
+}
+
+// new cria um {objeto} vazio, pega a keyword this e atrela ela ao objeto e faz o retorno
+const p1 = new Pessoa('Diego', 'Cardoso')
+Object.freeze(p1) // travar objeto para que nao seja alterado
+
+console.log(p1)
