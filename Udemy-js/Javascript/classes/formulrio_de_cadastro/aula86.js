@@ -44,14 +44,13 @@ class Validaçao {
                 valid = false
             }
             if(campo.classList.contains('cpf')){
-                if(!this.validaCPF(campo)) valid = false
+                if(!this.validaCpf(campo)) valid = false
             }
         }
     }
 
-    validaCPF(campo) { 
-        
-        const cpf = new ValidaCPF(campo.value)
+    validaCpf(campo) {    
+        const cpf = new ValidaCpf(campo.value)
         if(!cpf.valida()) {
            this.createError(campo, 'Cpf invalido')
            return false
