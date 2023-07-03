@@ -28,6 +28,32 @@ class Validaçao {
     handleSubmit(e) {
         e.preventDefault()
         const fieldValid = this.validCheck()
+        const senhaValida = this.senhaValidMethod()
+
+        if(fieldValid && senhaValida) {
+            alert('ok')
+            this.formulario.submit()
+        }
+    }
+
+    senhaValidMethod() {
+        let valid = true
+
+        const senha = this.formulario.querySelector('.password')
+        const reSenha = this.formulario.querySelector('.repassword')
+
+        if(senha.value !== reSenha.value) {
+            valid = false
+            this.criaErro(senha, 'Campo senha e repetir senha precisam ser iguais')
+            this.criaErro(reSenha, 'Campo senha e repetir senha precisam ser iguais')
+        }
+
+        if(senha.value.length < 6 || senha.value.length > 12) {
+            valid = false
+            this.criaErro(senha, 'Senha precisa ter entre 6 e 12 caracteres')
+        }
+
+        return valid
     }
 
     validCheck() {
@@ -46,7 +72,26 @@ class Validaçao {
             if(campo.classList.contains('cpf')){
                 if(!this.validaCpf(campo)) valid = false
             }
+            if(campo.classList.contains('usuario')){
+                if(!this.validaUser(campo)) valid = false
+            }
         }
+
+        return valid
+    }
+
+    validaUser(campo) {
+        const usuario = campo.value
+        let valid = true
+        if(usuario.length < 3 || usuario > 12) {
+            this.createError(campo, 'Usuario precisa ter entre 3 e 12 caracteres')
+           valid = false
+        }
+        if(!usuario.match(/^[a-zA-Z0-9]+$/g)) {
+            this.createError(campo, 'Usuario precisa conter apenas letras e numeros')
+            valid = false
+        }
+        return true
     }
 
     validaCpf(campo) {    
