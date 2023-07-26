@@ -13,3 +13,6 @@ function espera(msg, tempo) {
       }, tempo)
   }) 
 }
+
+//Promise.all Promise.race Promise.resolve Promise.reject
+
